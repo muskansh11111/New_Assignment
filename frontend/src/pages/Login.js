@@ -29,17 +29,19 @@ if(res.data.role === "admin"){
   };
 
   return (
-    <div className="container">
-      <h2>Login</h2>
+    <div className="container" style={{ border: "2px blue",color:"blue",justifyContent:"center",textAlign:"center",backgroundColor:"lightblue", width:"400px",height:"300px",margin:"auto",marginTop:"100px",borderRadius:"10px" } }>
+      <h2 style={{ border:"2px",color:"blue",justifyContent:"center",textAlign:"centerss"}}>Login</h2>
 
       <form onSubmit={handleSubmit}>
+        <label style={{color:"blue"}}><b>Email:</b></label><br/>    
         <input
           placeholder="Email"
           onChange={(e) =>
             setForm({ ...form, email: e.target.value })
           }
         />
-
+          <br/><br/>
+          <label style={{color:"blue"}}><b>Password:</b></label><br/>
         <input
           type="password"
           placeholder="Password"
@@ -47,11 +49,12 @@ if(res.data.role === "admin"){
             setForm({ ...form, password: e.target.value })
           }
         />
+        <br/><br/>    
 
-        <button>Login</button>
+        <button style={{color:"white",backgroundColor:"blue",width:"80px",height:"30px",borderRadius:"10px"}}>Login</button>
       </form>
 
-      <Link to="/signup">Signup</Link>
+     <p>Not registered?</p> <Link to="/signup">Signup</Link>
     </div>
   );
 }

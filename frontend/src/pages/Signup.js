@@ -23,16 +23,19 @@ function Signup() {
   };
 
   return (
-    <div className="container">
-      <h2>Signup</h2>
+    <div className="container" style={{ border: "2px blue",color:"blue",justifyContent:"center",textAlign:"center",backgroundColor:"lightblue", width:"400px",height:"500px",margin:"auto",marginTop:"100px",borderRadius:"10px" } }>
+      <h2 style={{color:"blue"}}>Signup</h2>
 
       <form onSubmit={handleSubmit}>
+        <label style={{color:"blue"}}><b>Name:</b></label><br/> 
         <input
           placeholder="Name"
           onChange={(e) =>
             setForm({ ...form, name: e.target.value })
           }
         />
+        <br/><br/>  
+        <label style={{color:"blue"}}><b>Email:</b></label><br/>    
 
         <input
           placeholder="Email"
@@ -40,7 +43,8 @@ function Signup() {
             setForm({ ...form, email: e.target.value })
           }
         />
-
+        <br/><br/>
+        <label style={{color:"blue"}}><b>Password:</b></label><br/> 
         <input
           type="password"
           placeholder="Password"
@@ -48,7 +52,8 @@ function Signup() {
             setForm({ ...form, password: e.target.value })
           }
         />
-
+        <br/><br/>
+        <label style={{color:"blue"}}><b>Role:</b></label><br/> 
         <select
           onChange={(e) =>
             setForm({ ...form, role: e.target.value })
@@ -57,8 +62,9 @@ function Signup() {
           <option value="member">Member</option>
           <option value="admin">Admin</option>
         </select>
-
-        <button>Signup</button>
+        <br/><br/>          
+        
+        <button style={{color:"white",backgroundColor:"blue",width:"80px",height:"30px",borderRadius:"10px"}}   >Signup</button>
       </form>
     </div>
   );

@@ -49,9 +49,9 @@ function MemberDashboard() {
     <div className="member-container">
 
       <div className="member-sidebar">
-        <h2>Team Manager</h2>
+        <h2 style={{color:"blue"}}>Team Manager</h2>
 
-        <ul >
+        <ul style={{backgroundColor:"lightblue",border:"2px"}}>
           <li>Dashboard</li>
          <Link to="profile"> <li>Profile</li></Link>
           <Link to="/tasks"><li>My Tasks</li></Link>
